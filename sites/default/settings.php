@@ -80,7 +80,7 @@
  *   'database' => 'databasename',
  *   'username' => 'sqlusername',
  *   'password' => 'sqlpassword',
- *   'host' => 'localhost',
+ *   'host' => '127.0.0.1',
  *   'port' => '3306',
  *   'driver' => 'mysql',
  *   'prefix' => '',
@@ -212,7 +212,7 @@ $databases = [];
  *     'database' => 'databasename',
  *     'username' => 'sqlusername',
  *     'password' => 'sqlpassword',
- *     'host' => 'localhost',
+ *     'host' => '127.0.0.1',
  *     'prefix' => '',
  *   );
  * @endcode
@@ -773,7 +773,7 @@ $databases['default']['default'] = array (
   'username' => 'root',
   'password' => '',
   'prefix' => '',
-  'host' => 'localhost',
+  'host' => '127.0.0.1',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',

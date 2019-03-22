@@ -6,7 +6,8 @@
     "require": {
         "composer/installers": "^1.0.24",
         "wikimedia/composer-merge-plugin": "^1.4",
-        "drupal/core": "8.6.13"
+        "drupal/core": "8.6.13",
+        "drush/drush": "^9.6"
     },
     "replace": {
         "drupal/core": "^8.6"
