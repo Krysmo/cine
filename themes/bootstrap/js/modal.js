@@ -117,18 +117,6 @@
         }
       };
 
-      /**
-       * Map dialog options.
-       *
-       * Note: this is primarily for use in modal.jquery.ui.bridge.js.
-       *
-       * @param {Object} options
-       *   The passed options.
-       */
-      Modal.prototype.mapDialogOptions = function (options) {
-        return options || {};
-      }
-
       // Modal jQuery Plugin Definition.
       var Plugin = function () {
         // Extract the arguments.
@@ -149,13 +137,11 @@
           var initialize = false;
 
           // Immediately return if there's no instance to invoke a valid method.
-          var showMethods = ['open', 'show', 'toggle'];
-          if (!data && method && showMethods.indexOf(method) === -1) {
+          if (!data && method && method !== 'open') {
             return;
           }
 
           options = Bootstrap.normalizeObject($.extend({}, Modal.DEFAULTS, data && data.options, $this.data(), options));
-          delete options['bs.modal'];
 
           if (!data) {
             $this.data('bs.modal', (data = new Modal(this, options)));
@@ -181,10 +167,12 @@
               Bootstrap.unsupported('method', method);
             }
           }
-          // No method, set options and open if necessary.
           else {
+            // If no method set the options.
             data.option(options);
-            if (options.show && !data.isShown) {
+
+            // Handle native modal showing.
+            if (!options.jQueryUiBridge && options.show && !data.isShown) {
               data.show(relatedTarget);
             }
           }

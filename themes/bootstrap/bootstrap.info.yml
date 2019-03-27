@@ -31,8 +31,6 @@ libraries-extend:
     - bootstrap/drupal.dialog.ajax
   core/drupal.form:
     - bootstrap/drupal.form
-  core/drupal.message:
-    - bootstrap/drupal.message
   core/drupal.progress:
     - bootstrap/drupal.progress
   core/drupal.states:
@@ -77,8 +75,8 @@ libraries-override:
       theme:
         css/node.preview.css: false
 
-# Information added by Drupal.org packaging script on 2019-01-21
-version: '8.x-3.17'
+# Information added by Drupal.org packaging script on 2018-11-22
+version: '8.x-3.15'
 core: '8.x'
 project: 'bootstrap'
-datestamp: 1548102192
+datestamp: 1542871987
